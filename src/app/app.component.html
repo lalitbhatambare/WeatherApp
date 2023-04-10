@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="weather-app">
+    <div class="top-section">
+      <img src="../assets/hot.png" class="bg-img">
+      <div class="city-temperature-box">
+        <input type="text"  name="city" class="city-serach" (keyup.enter)="getVal($event)"   placeholder="Enter your city name">
+        <h1 class="city">{{weatherData?.name}}</h1>
+        <p class="weather-description">{{weatherData?.weather[0].description}}</p>
+        <div class="temperature">{{weatherData?.wind.deg}}°C</div>
+      </div>
+    </div>
+    <div class="more-section">
+      <div class="more-info">
+        More information 
+      </div>
+      <div class="row-section">
+        <div class="col-section">
+          <div class="icon-text">
+            <img src="../assets/temperature-max.png">
+          </div>
+          <div class="info-value"><span>Min Temp</span>{{weatherData?.main.temp_min | number:'1.0-0'}}°C</div>
+        </div>
+        <div class="col-section">
+          <div class="icon-text">
+            <img src="../assets/temperature-min.png">
+          </div>
+          <div class="info-value"><span>Max Temp</span>{{weatherData?.main.temp_max}}°C</div>
+        </div>
+        <div class="col-section">
+          <div class="icon-text">
+            <img src="../assets/humidity.png">
+          </div>
+          <div class="info-value"><span>Humidity</span>{{weatherData?.main.humidity}}</div>
+        </div>
+        <div class="col-section">
+          <div class="icon-text">
+            <img src="../assets/wind-speed.png">
+          </div>
+          <div class="info-value"><span>Wind Speed</span>{{weatherData?.wind.speed}}</div>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
