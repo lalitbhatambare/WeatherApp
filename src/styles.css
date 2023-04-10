@@ -164,22 +164,16 @@
     }
 
     .icon-text {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
         flex-direction: column;
-        align-content: center;
     }
 
     .col-section {
         padding: 20px;
-        color: #fff;
-        display: flex;
+
         flex-direction: column;
         align-content: center;
         width: 100%;
-        text-align: center;
+
     }
 
     .info-value {
